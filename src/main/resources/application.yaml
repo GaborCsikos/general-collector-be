@@ -1,0 +1,13 @@
+spring:
+  jpa:
+    database: POSTGRESQL
+    show-sql: false
+    hibernate:
+      ddl-auto: none
+
+  datasource:
+    platform: postgres
+    url: jdbc:postgresql://localhost:5431/general-collector-db
+    username: postgres
+    password: postgres
+    driverClassName: org.postgresql.Driver
