@@ -1,0 +1,25 @@
+Features:
+
+Investor:
+1; List investments
+2; List own investments
+3; (Create) Invest to something
+4; Cancel investment (delete)
+5; Update Investment
+6; After cancel investment can't invest for a month
+7; Alltogether 3 cancels and remove user
+8; History for Investment, Update, Delete
+
+Seller
+1; Create CF
+2; (after 1 week publish CF)
+3; Edit CF (increase Publish time)
+3; Delete CF
+4; List own CF-s
+5; after 3 removed CF suspend 1 month
+6; History for Investment, Update, Delete
+
+Policy
+Admin can do anything CRUD
+Admin can CRD (update not) policy
+Audit all
