@@ -7,7 +7,7 @@ Investor:
 4; Cancel investment (delete)
 5; Update Investment
 6; After cancel investment can't invest for a month
-7; Alltogether 3 cancels and remove user
+7; All together 3 cancels and remove user
 8; History for Investment, Update, Delete
 
 Seller
@@ -23,3 +23,6 @@ Policy
 Admin can do anything CRUD
 Admin can CRD (update not) policy
 Audit all
+
+Authentication
+Crate user (Admin, Service, OAUTH)

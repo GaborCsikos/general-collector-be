@@ -15,7 +15,7 @@ import lombok.*;
 @Setter
 @Builder
 @MappedSuperclass
-public abstract class Investor extends User {
+public class Investor extends User {
 
 
 }

@@ -1,8 +1,7 @@
 package hu.gcsikos.collector.collectorbackendms.response;
 
+import hu.gcsikos.collector.collectorbackendms.general.AbstractResponse;
 import lombok.*;
-
-import java.io.Serializable;
 
 @Getter
 @Setter
@@ -10,8 +9,7 @@ import java.io.Serializable;
 @NoArgsConstructor
 @Builder
 @AllArgsConstructor
-public class GenericResponse implements Serializable {
-    private static final long serialVersionUID = 1L;
+public class GenericResponse extends AbstractResponse {
 
     private String message;
 }

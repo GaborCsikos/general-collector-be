@@ -1,4 +1,4 @@
-package hu.gcsikos.collector.collectorbackendms.entity.general;
+package hu.gcsikos.collector.collectorbackendms.entity.history;
 
 import lombok.Getter;
 import lombok.ToString;

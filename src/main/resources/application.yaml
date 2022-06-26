@@ -16,3 +16,7 @@ translate:
   error:
     general:
       message: Please connect customer support
+
+server:
+  servlet:
+    context-path: /api

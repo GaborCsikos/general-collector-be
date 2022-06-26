@@ -1,4 +1,4 @@
-package hu.gcsikos.collector.collectorbackendms.entity.general;
+package hu.gcsikos.collector.collectorbackendms.entity.history;
 
 import jakarta.persistence.*;
 import lombok.*;

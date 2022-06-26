@@ -1,6 +1,6 @@
 package hu.gcsikos.collector.collectorbackendms.entity.user;
 
-import hu.gcsikos.collector.collectorbackendms.entity.general.CreatedAndUpdatedEntity;
+import hu.gcsikos.collector.collectorbackendms.general.CreatedAndUpdatedEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.MappedSuperclass;

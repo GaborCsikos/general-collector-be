@@ -1,6 +1,6 @@
 package hu.gcsikos.collector.collectorbackendms.entity.product;
 
-import hu.gcsikos.collector.collectorbackendms.entity.general.CreatedAndUpdatedEntity;
+import hu.gcsikos.collector.collectorbackendms.general.CreatedAndUpdatedEntity;
 import jakarta.persistence.*;
 import lombok.*;
 

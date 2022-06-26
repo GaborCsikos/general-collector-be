@@ -1,8 +1,8 @@
 package hu.gcsikos.collector.collectorbackendms.entity.investment;
 
-import hu.gcsikos.collector.collectorbackendms.entity.general.CreatedAndUpdatedEntity;
 import hu.gcsikos.collector.collectorbackendms.entity.product.Currency;
 import hu.gcsikos.collector.collectorbackendms.entity.product.ProductType;
+import hu.gcsikos.collector.collectorbackendms.general.CreatedAndUpdatedEntity;
 import jakarta.persistence.*;
 import lombok.*;
 
