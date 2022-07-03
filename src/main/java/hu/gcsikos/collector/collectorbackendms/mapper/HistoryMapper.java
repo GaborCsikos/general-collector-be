@@ -1,26 +1,17 @@
 package hu.gcsikos.collector.collectorbackendms.mapper;
 
 import hu.gcsikos.collector.collectorbackendms.entity.history.History;
-import hu.gcsikos.collector.collectorbackendms.general.Mapper;
-import hu.gcsikos.collector.collectorbackendms.request.create.HistoryRequestForCreate;
-import hu.gcsikos.collector.collectorbackendms.request.generic.HistoryRequest;
 import hu.gcsikos.collector.collectorbackendms.response.HistoryResponse;
+import org.springframework.beans.BeanUtils;
 import org.springframework.stereotype.Component;
 
 @Component
-public class HistoryMapper implements Mapper<HistoryRequest, HistoryResponse, History, HistoryRequestForCreate> {
-    @Override
-    public HistoryResponse mapFromEntityToResponse(History history) {
-        return null;
+public class HistoryMapper {
+
+    public HistoryResponse mapFromEntityToResponse(History mapFrom) {
+        HistoryResponse response = new HistoryResponse();
+        BeanUtils.copyProperties(mapFrom, response);
+        return response;
     }
 
-    @Override
-    public History updateEntity(History original, HistoryRequestForCreate toUpdate) {
-        return null;
-    }
-
-    @Override
-    public History createEntity(HistoryRequest toCreate) {
-        return null;
-    }
 }

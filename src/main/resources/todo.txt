@@ -1,5 +1,13 @@
 Features:
 
+FIRST
+CRUD Product
+CRUD Investment
+
+Next
+
+
+BACKLOG:
 Investor:
 1; List investments
 2; List own investments

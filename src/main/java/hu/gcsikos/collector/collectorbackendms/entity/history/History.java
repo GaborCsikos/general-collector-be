@@ -1,7 +1,17 @@
 package hu.gcsikos.collector.collectorbackendms.entity.history;
 
-import jakarta.persistence.*;
-import lombok.*;
+import hu.gcsikos.collector.collectorbackendms.general.CreatedAndUpdatedEntity;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+import lombok.experimental.SuperBuilder;
 import org.springframework.data.annotation.CreatedDate;
 
 import java.time.OffsetDateTime;
@@ -14,21 +24,22 @@ import java.time.OffsetDateTime;
 @NoArgsConstructor
 @Getter
 @Setter
-@Builder
-public class History {
+@SuperBuilder
+public class History extends CreatedAndUpdatedEntity {
 
     @CreatedDate
     @Column(name = "history_when", nullable = false, updatable = false)
-    protected OffsetDateTime historyWhen;
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private OffsetDateTime historyWhen;
+
     @Column(name = "value", nullable = false)
     private String historyEvent;
+
     @Column(name = "history_who_id", nullable = false)
     private Long historyWhoId;
+
     @Column(name = "history_what_id", nullable = false)
     private Long historyWhatId;
+
     @Column(name = "history", nullable = false)
     @Enumerated(EnumType.STRING)
     private HistoryEntity historyEntity;

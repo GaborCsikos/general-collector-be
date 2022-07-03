@@ -1,6 +1,6 @@
 package hu.gcsikos.collector.collectorbackendms.request.generic;
 
-import hu.gcsikos.collector.collectorbackendms.request.create.InvestorRequestForCreate;
+import hu.gcsikos.collector.collectorbackendms.general.AbstractRequest;
 
-public class InvestorRequest extends InvestorRequestForCreate {
+public class InvestorRequest extends AbstractRequest {
 }

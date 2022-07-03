@@ -1,6 +1,6 @@
 package hu.gcsikos.collector.collectorbackendms.request.generic;
 
-import hu.gcsikos.collector.collectorbackendms.request.create.SellerRequestForCreate;
+import hu.gcsikos.collector.collectorbackendms.general.AbstractRequest;
 
-public class SellerRequest extends SellerRequestForCreate {
+public class SellerRequest extends AbstractRequest {
 }
