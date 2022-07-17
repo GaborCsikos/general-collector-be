@@ -1,12 +1,21 @@
 package hu.gcsikos.collector.collectorbackendms.entity.investment;
 
 import hu.gcsikos.collector.collectorbackendms.entity.product.Currency;
-import hu.gcsikos.collector.collectorbackendms.entity.product.ProductType;
 import hu.gcsikos.collector.collectorbackendms.general.CreatedAndUpdatedEntity;
-import jakarta.persistence.*;
-import lombok.*;
+import jakarta.persistence.Column;
+import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
+import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 import java.math.BigDecimal;
+import java.time.OffsetDateTime;
 
 
 @Entity
@@ -20,14 +29,15 @@ import java.math.BigDecimal;
 public class Investment extends CreatedAndUpdatedEntity {
 
 
-    @Column(name = "value", nullable = false)
-    private BigDecimal maxValue;
+    @Column(name = "investment", nullable = false)
+    private BigDecimal investment;
 
     @Column(name = "currency", nullable = false)
     @Enumerated(EnumType.STRING)
     private Currency currency;
 
-    @Column(name = "product_type", nullable = false)
-    @Enumerated(EnumType.STRING)
-    private ProductType productType;
+    @Column(name = "invested_at")
+    private OffsetDateTime investedAt;
+
+    // TODO relationship
 }

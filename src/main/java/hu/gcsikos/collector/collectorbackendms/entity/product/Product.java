@@ -39,7 +39,7 @@ public class Product extends CreatedAndUpdatedEntity {
     @Enumerated(EnumType.STRING)
     private Currency currency;
 
-    @Column(name = "currency", nullable = false)
+    @Column(name = "product_type", nullable = false)
     @Enumerated(EnumType.STRING)
     private ProductType productType;
 
