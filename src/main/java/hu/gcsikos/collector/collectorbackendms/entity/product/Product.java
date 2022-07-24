@@ -1,19 +1,21 @@
 package hu.gcsikos.collector.collectorbackendms.entity.product;
 
+import hu.gcsikos.collector.collectorbackendms.entity.user.Seller;
 import hu.gcsikos.collector.collectorbackendms.general.CreatedAndUpdatedEntity;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
+import java.math.BigDecimal;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 import lombok.experimental.SuperBuilder;
-
-import java.math.BigDecimal;
 
 
 @Entity
@@ -43,5 +45,7 @@ public class Product extends CreatedAndUpdatedEntity {
     @Enumerated(EnumType.STRING)
     private ProductType productType;
 
-    // TODO 1-Many Seller product-> Product List
+    @ManyToOne
+    @JoinColumn(name = "id", nullable = false)
+    private Seller seller;
 }

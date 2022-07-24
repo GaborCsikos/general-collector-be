@@ -1,5 +1,6 @@
 package hu.gcsikos.collector.collectorbackendms.config;
 
+import hu.gcsikos.collector.collectorbackendms.exception.GenericException;
 import hu.gcsikos.collector.collectorbackendms.response.GenericResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -21,4 +22,10 @@ public class ControllerAdvice {
         return ResponseEntity.badRequest().body(GenericResponse.builder().message(generalError).build());
     }
 
+
+    @ExceptionHandler(GenericException.class)
+    public ResponseEntity<GenericResponse> handleGenericException(Exception ex) {
+        LOGGER.error("Generic error:", ex);
+        return ResponseEntity.badRequest().body(GenericResponse.builder().message(generalError).build());
+    }
 }
